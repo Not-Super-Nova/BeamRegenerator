@@ -5,7 +5,7 @@
 local M = {}
 
 local regenEnabled = false
-local regenRate = 0.025
+local regenRate = 0.05
 local repairErrorMargin = 0.0015
 local regenTime = 0
 
@@ -62,7 +62,9 @@ local function regenerate()
   --build the cache
   for k,beam in pairs(v.data.beams) do
     --do some checks
-    local isValid = validRegenPart(getBeamPartOrigin(beam,false)) and validRegenPart(getBeamPartOrigin(beam,true)) and (beam.beamType == "|NORMAL" or beam.beamType == "|BOUNDED")
+    --local isValid = validRegenPart(getBeamPartOrigin(beam,false)) and validRegenPart(getBeamPartOrigin(beam,true)) and (beam.beamType == "|NORMAL" or beam.beamType == "|BOUNDED")
+    -- Got beamtypes from BeamNG.drive\lua\vehicle\jbeam, checking if beam is NORMAL or BOUNDED
+    local isValid = validRegenPart(getBeamPartOrigin(beam,false)) and validRegenPart(getBeamPartOrigin(beam,true)) and (beam.beamType == 0 or beam.beamType == 2)
     if not isValid or obj:beamIsBroken(beam.cid) then goto next end --skip!
     
     --get beam length, check if this is a 'weird' beam?
@@ -78,7 +80,7 @@ local function regenerate()
     
     ::next::
   end
-  
+
   --finally, flag for regen
   regenEnabled = true
 end

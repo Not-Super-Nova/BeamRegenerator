@@ -1,5 +1,5 @@
 angular.module('beamng.apps')
-.directive('beamRegenerator', ['bngApi', function (bngApi) {
+.directive('beamRegenerator', ['CanvasShortcuts', function (CanvasShortcuts) {
   return {
     template:
     '<div style="max-height:100%; width:100%;" layout="row" layout-align="center center" layout-wrap class="bngApp">' +
