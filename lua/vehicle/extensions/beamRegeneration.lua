@@ -40,7 +40,7 @@ end
 local function validRegenPart(partName)
   local isValid = true
   local po = partName:lower()
-  if string.find(po, "driveshaft") or string.find(po,"coilover") or string.find(po,"suspension") or  string.find(po,"steering") or  string.find(po,"swaybar") or  string.find(po,"brake") or string.find(po,"spring") or string.find(po,"wheel") then isValid = false end
+  if string.find(po, "driveshaft") or string.find(po,"coilover") or string.find(po,"suspension") or  string.find(po,"steering") or  string.find(po,"swaybar") or  string.find(po,"brake") or string.find(po,"spring") or string.find(po,"wheel") or string.find(po,"mudflap") or string.find(po,"cape") or string.find(po,"flag") then isValid = false end
   return isValid
 end
 
