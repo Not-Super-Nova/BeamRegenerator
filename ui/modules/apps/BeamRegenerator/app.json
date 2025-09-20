@@ -1,0 +1,19 @@
+{
+  "domElement": "<beam-regenerator></beam-regenerator>",
+  "name": "Beam Regenerator",
+  "types": [
+    "ui.apps.categories.debug"
+  ],
+  "description": "An app that allows you to fix your vehicle after a crash",
+  "css": {
+    "left": "20px",
+    "height": "110px",
+    "width": "310px",
+    "min-width": "230px",
+    "min-height": "40px",
+    "top": "100px"
+  },
+  "author": "Dummiesman",
+  "version": "0.1",
+  "directive": "beamRegenerator"
+}
